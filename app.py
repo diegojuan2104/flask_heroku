@@ -14,9 +14,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app) #Allow add Resources from flask Rest-full
 app.secret_key = '123456789123456789qwewqqwer'
 
-@app.before_first_request #To Create all the tables before run 
-def create_tables():
-    db.create_all()
+
 
 jwt = JWT(app, authenticate, identity) # using URL/auth whit authenticate comfirm the user and password, and with identity returns the user token encripted 
 
