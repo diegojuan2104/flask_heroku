@@ -9,7 +9,7 @@ from resources.item import Item, ItemList
 from resources.store import Store,StoreList
 
 app = Flask(__name__) #This means that this it's the main doc where flask runs
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(('DATABASE_URL')','sqlite:///data.db') # To locate the db doc, and add sqlite,postgreSQL,Oracle whatever....
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db') # To locate the db doc, and add sqlite,postgreSQL,Oracle whatever....
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app) #Allow add Resources from flask Rest-full
 app.secret_key = '123456789123456789qwewqqwer'
